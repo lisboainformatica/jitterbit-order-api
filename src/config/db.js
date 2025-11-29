@@ -1,15 +1,11 @@
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
-  const uri = process.env.MONGO_URI || 'mongodb://localhost:27017/jitterbit_orders';
   try {
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    console.log('MongoDB connected');
-  } catch (err) {
-    console.error('MongoDB connection error', err);
+    await mongoose.connect(process.env.MONGO_URI); // sem opções antigas!
+    console.log('MongoDB conectado com sucesso!');
+  } catch (error) {
+    console.error('Erro ao conectar no MongoDB:', error.message);
     process.exit(1);
   }
 };
