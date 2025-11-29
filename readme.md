@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Jitterbit Orders API  
 API REST construída em Node.js com MongoDB, JWT e Swagger — baseada no desafio técnico.
 
